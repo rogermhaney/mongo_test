@@ -52,14 +52,13 @@ def randomLine(name_of_file):
     return str(line.strip('\n'))
 
 # edit connect string as needed
-connect(host='mongodb://admin:password@172.22.8.63:27017/xilinxtest?replicaSet=rs0')
-
-'''
-    username='admin', 
-    password='password',
-    authentication_source='admin'
+connect(
+    host='mongodb://mongodb-standalone-0.database:27017,mongodb-standalone-1.database:27017,mongodb-standalone-2.database:27017/xilinxtest?replicaSet=rs0',
+    username='xilinxUser',
+    password='Cisco123',
+    authentication_source='xilinxtest'
 )
-'''
+
 i=1
 while i<10:
     post_1 = Post(
